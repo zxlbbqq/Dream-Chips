@@ -1,0 +1,528 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	scroll-behavior: smooth;
+	}
+:root {
+	--index: calc(1vw + 1vh);
+	--text: #e7e7e0;
+	--transition: transform .75s cubic-bezier(.075, .5, 0, 1);
+}
+@font-face {
+	font-family: appetite;
+	src: url(../fonts/Appetite.ttf);
+}
+@font-face {
+	font-family: tenorsans;
+	src: url(../fonts/TenorSans-Regular.ttf);
+}
+body {
+	background-color: #010101;
+	font-family: appetite, sans-serif;
+	line-height: 1.55;
+	cursor: url(../img/cursor.png) 23 15, default;
+}
+.header{
+	top: 0px;
+	position: sticky;
+	width: 100%;
+	background-color: #fce339;
+	z-index: 3;
+}
+.logo{
+	margin-left: 100px;
+	display: inline-block;
+}
+.logo h1{
+	text-decoration: none;
+	border: 0 !important;
+	outline: none !important;
+	font-family: appetite;
+	font-size: 24px;
+	padding: 10px;
+	color: #000000;
+	cursor: url(../img/pointer.png) 23 15, pointer;
+}
+.nav{
+	position: relative;
+	display: inline-block;
+	left: 60%;
+}
+.navlink{
+	position: relative;
+	display: inline-block;
+}
+.navlink h1{
+	display: inline-block;
+	margin-right: 35px;
+	font-family: tenorsans;
+	font-size: 16px;
+	padding-left: 0px;
+	color: #000000;
+	transition: 0.2s;
+	cursor: url(../img/pointer.png) 23 15, pointer;
+}
+.navlink h1:hover{
+	display: inline-block;
+	margin-right: 35px;
+	font-family: tenorsans;
+	font-size: 16px;
+	padding-left: 0px;
+	color: #ffffff;
+	cursor: url(../img/pointer.png) 23 15, pointer;
+}
+
+
+.navlink2{
+	position: relative;
+	display: inline-block;
+}
+.navlink2 h1{
+	display: inline-block;
+	margin-right: 35px;
+	font-family: tenorsans;
+	font-size: 16px;
+	padding-left: 0px;
+	color: #000000;
+	transition: 0.2s;
+	cursor: url(../img/pointer.png) 23 15, pointer;
+}
+.navlink2 h1:hover{
+	display: inline-block;
+	margin-right: 35px;
+	font-family: tenorsans;
+	font-size: 16px;
+	padding-left: 0px;
+	color: #ffffff;
+	cursor: url(../img/pointer.png) 23 15, pointer;
+}
+
+
+
+.navlink3{
+	position: relative;
+	display: inline-block;
+}
+.navlink3 h1{
+	display: inline-block;
+	margin-right: 35px;
+	font-family: tenorsans;
+	font-size: 16px;
+	padding-left: 0px;
+	color: #000000;
+	transition: 0.2s;
+	cursor: url(../img/pointer.png) 23 15, pointer;
+}
+.navlink3 h1:hover{
+	display: inline-block;
+	margin-right: 35px;
+	font-family: tenorsans;
+	font-size: 16px;
+	padding-left: 0px;
+	color: #ffffff;
+	cursor: url(../img/pointer.png) 23 15, pointer;
+	
+}
+
+
+
+.navactive{
+	position: relative;
+	display: inline-block;
+
+}
+.navactive h1{
+	display: inline-block;
+	margin-right: 35px;
+	font-family: tenorsans;
+	font-size: 16px;
+	padding-left: 0px;
+	color: #ffffff;
+	transition: 0.2s;
+	cursor: url(../img/pointer.png) 23 15, pointer;
+}
+
+.main-header {
+	position: relative;
+}
+.main-header::after {
+	content: '';
+	position: absolute;
+	z-index: 100;
+	width: 100%;
+	height: 100%;
+	background-image: url(../img/22.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	bottom: -830px;
+}
+.layers {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	overflow: hidden;
+	position: relative;
+}
+.layer {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	background-size: cover;
+	background-position: center;
+	will-change: transform;
+	z-index: 3;
+	transition: var(--transition);
+}
+.layers__base {
+	transform: translate3d(0, calc(var(--scrollTop) / 1.6), 0);
+	z-index: 0;
+}
+.layers__middle {
+	transform: translate3d(0, calc(var(--scrollTop) / 2.5), 0);
+	z-index: 1;
+}
+.layers__front {
+	transform: translate3d(0, calc(var(--scrollTop) / 5.7), 0);
+}
+.layer__header {
+	z-index: 2;
+	transform: translate3d(0, calc(var(--scrollTop) / 2), 0);
+	transition: var(--transition);
+	will-change: transform;
+	text-transform: uppercase;
+	font-weight: 900;
+	color: var(--text);
+	text-shadow: 0 0 15px #9d822b;
+}
+h3{
+	transform: translate3d(0, calc(var(--scrollTop) / -95), 0);
+	position: absolute;
+	font-size: 56px;
+	margin-top: 140px;
+	margin-left: 950px;
+	z-index: 1;
+}
+h4{
+	font-family: tenorsans;
+	transform: translate3d(0, calc(var(--scrollTop) / -95), 0);
+	position: absolute;
+	font-size: 24px;
+	margin-top: 250px;
+	margin-left: 950px;
+	z-index: 10;
+}
+h5{
+	transform: translate3d(0, calc(var(--scrollTop) / -95), 0);
+	position: absolute;
+	font-size: 24px;
+	margin-top: 430px;
+	margin-left: 950px;
+	z-index: 10;
+}
+.main-article {
+	min-height: 100vh;
+	background-size: cover;
+	background-position: center;
+	color: var(--text);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	text-align: center;
+	top: -1px;
+	z-index: 10;
+}
+.main-article__header {
+	margin-top: -310px;
+	font-family: appetite;
+	color: #000;
+	text-transform: uppercase;
+	font-size: 54px;
+	will-change: transform;
+}
+.main-article__paragraph {
+	font-weight: 600;
+	font-family: tenorsans;
+	color: #000;
+	font-size: 24px;
+	margin-top: 10px;
+}
+.main-article__header2 {
+	margin-top: -240px;
+	font-family: appetite;
+	color: #ffffff;
+	text-transform: uppercase;
+	font-size: 54px;
+	will-change: transform;
+}
+.main-article__paragraph2 {
+	font-weight: 600;
+	font-family: tenorsans;
+	color: #ffffff;
+	font-size: 24px;
+	margin-top: 10px;
+}
+.main-article__paragraph3 {
+	position: absolute;
+	font-weight: 600;
+	font-family: tenorsans;
+	color: #ffffff;
+	font-size: 24px;
+	margin-top: 330px;
+	margin-left: -45px;
+}
+.content {
+	will-change: transform;
+}
+.chips {
+	position: absolute;
+	margin-left: -1800px;
+	margin-top: -1470px;
+	z-index: 10;
+	transform: scale(0.18);
+}
+.c-button {
+	cursor: pointer;
+	position: absolute;
+	margin-left: 950px;
+	margin-top: 520px;
+	appearance: none;
+	border: 0;
+	border-radius: 35px;
+	background: #fd3535;
+	color: #fff;
+	padding: 8px 16px;
+	font-size: 32px;
+	z-index: 10;
+	transition: 0.2s;
+  }
+  .c-button a{
+	font-size: 43px;
+	color: white;
+	text-decoration: none;
+	border: 0 !important;
+	outline: none !important;
+	cursor: url(../img/pointer.png) 23 15, pointer;
+  }
+  .c-button h1{
+	font-size: 43px;
+	color: white;
+	text-decoration: none;
+	border: 0 !important;
+	outline: none !important;
+	cursor: url(../img/pointer.png) 23 15, pointer;
+  }
+  .c-button:hover {
+	transform: scale(1.1);
+	cursor: pointer;
+	background: #7a2828;
+	text-decoration: none;
+	border: 0 !important;
+	outline: none !important;
+	cursor: url(../img/pointer.png) 23 15, pointer;
+  }
+  .c-button:active {
+	transform: scale(0.9);
+	cursor: pointer;
+	outline: none;
+	background: #d74646;
+	text-decoration: none;
+	border: 0 !important;
+	outline: none !important;
+	cursor: url(../img/pointer.png) 23 15, pointer;
+  }
+  .promo{
+	position: absolute;
+	margin-top: 30px;
+	margin-left: -35px;
+	border: 2px solid black;
+	height: 567px;
+	z-index: 100;
+  }
+  .allshops{
+	z-index: 100;
+	margin-left: -50px;
+	margin-top: 40px;
+	cursor: url(../img/pointer.png) 23 15, pointer;
+	z-index: 100;
+  }
+  .perekrestok{
+	border: 2px solid black;
+	position: absolute;
+	margin-top: 50px;
+	margin-left: -375px;
+	z-index: 100;
+ 	height: 205px;
+	transition: 0.2s;
+ 	width: 206px;
+	cursor: url(../img/pointer.png) 23 15, pointer;
+  }
+  .perekrestok a{
+	cursor: url(../img/pointer.png) 23 15, pointer;
+  }
+  .perekrestok:hover{
+	cursor: pointer;
+	transform: scale(1.1);
+	cursor: url(../img/pointer.png) 23 15, pointer;
+  }
+  .pyaterochka{
+	border: 2px solid black;
+	position: absolute;
+	margin-top: 50px;
+	margin-left: -120px;
+	z-index: 100;
+ 	height: 205px;
+	transition: 0.2s;
+ 	width: 206px;
+	cursor: url(../img/pointer.png) 23 15, pointer;
+  }
+  .pyaterochka a{
+	cursor: url(../img/pointer.png) 23 15, pointer;
+  }
+  .pyaterochka:hover{
+	cursor: pointer;
+	transform: scale(1.1);
+	cursor: url(../img/pointer.png) 23 15, pointer;
+  }
+  .magnit{
+	border: 2px solid black;
+	position: absolute;
+	margin-top: 50px;
+	margin-left: 135px;
+	z-index: 100;
+ 	height: 205px;
+	transition: 0.2s;
+ 	width: 206px;
+	cursor: url(../img/pointer.png) 23 15, pointer;
+  }
+  .magnit a{
+	cursor: url(../img/pointer.png) 23 15, pointer;
+  }
+  .magnit:hover{
+	cursor: pointer;
+	transform: scale(1.1);
+	cursor: url(../img/pointer.png) 23 15, pointer;
+  }
+  .diksi{
+	border: 2px solid black;
+	position: absolute;
+	margin-top: 50px;
+	margin-left: 390px;
+	z-index: 100;
+ 	height: 205px;
+ 	width: 206px;
+	transition: 0.2s;
+	cursor: url(../img/pointer.png) 23 15, pointer;
+  }
+  .diksi a{
+	cursor: url(../img/pointer.png) 23 15, pointer;
+  }
+  .diksi:hover{
+	cursor: pointer;
+	transform: scale(1.1);
+	cursor: url(../img/pointer.png) 23 15, pointer;
+  }
+  .lenta{
+	border: 2px solid black;
+	position: absolute;
+	margin-top: 50px;
+	margin-left: 645px;
+	z-index: 100;
+ 	height: 205px;
+ 	width: 206px;
+	transition: 0.2s;
+	cursor: url(../img/pointer.png) 23 15, pointer;
+  }
+  .lenta a{
+	cursor: url(../img/pointer.png) 23 15, pointer;
+  }
+  .lenta:hover{
+	cursor: pointer;
+	transform: scale(1.1);
+	cursor: url(../img/pointer.png) 23 15, pointer;
+  }
+  .ashan{
+	border: 2px solid black;
+	position: absolute;
+	margin-top: 50px;
+	margin-left: 900px;
+	z-index: 100;
+ 	height: 205px;
+ 	width: 206px;
+	transition: 0.2s;
+	cursor: url(../img/pointer.png) 23 15, pointer;
+  }
+  .ashan a{
+	cursor: url(../img/pointer.png) 23 15, pointer;
+  }
+  .ashan:hover{
+	cursor: pointer;
+	transform: scale(1.1);
+	cursor: url(../img/pointer.png) 23 15, pointer;
+  }
+  .footer {
+	position: absolute;
+	bottom: calc(var(--index) * 1);
+	margin-bottom: -30px;
+	width: 100%;
+	height: 100px;
+	background-color: #fce339;
+}
+.logofooter{
+	margin-top: 22px;
+	margin-left: -1536px;
+	display: inline-block;
+	cursor: url(../img/pointer.png) 23 15, pointer;
+}
+.logofooter h1{
+	font-family: appetite;
+	font-size: 24px;
+	padding: 10px;
+	color: #000000;
+	cursor: url(../img/pointer.png) 23 15, pointer;
+}
+.textfooter{
+	position: absolute;
+	margin-top: -60px;
+	margin-left: 450px;
+}
+.textfooter h1{
+	font-weight: bold;
+	font-family: tenorsans;
+	font-size: 16px;
+	padding-left: 0px;
+	color: #000000;
+	cursor: url(../img/pointer.png) 23 15, pointer;
+}
+.textfooter2{
+	position: absolute;
+	margin-top: -20px;
+	margin-left: 725px;
+	cursor: url(../img/pointer.png) 23 15, pointer;
+}
+.textfooter2 h1{
+	font-weight: 100;
+	font-family: tenorsans;
+	font-size: 16px;
+	padding-left: 0px;
+	color: #000000;
+	cursor: url(../img/pointer.png) 23 15, pointer;
+}
+.yak1{
+	position: absolute;
+	margin-top: 2000px;
+}
+.yak2{
+	position: absolute;
+	margin-top: 930px;
+}
+.yak3{
+	position: absolute;
+	margin-top: -400px;
+}
